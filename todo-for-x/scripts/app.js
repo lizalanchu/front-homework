@@ -24,6 +24,7 @@ function rerender() {
     const element = document.createElement('div');
     element.classList.add('todo');
     element.innerHTML = `<div class="todo__day">Дело ${Number(index) + 1}</div>
+              <input type="checkbox" id="task${Number(index) + 1}">
               <div class="todo__comment" ondblclick="editTodo(${index})">${todos[index]}</div>
               <button class="todo__delete" onclick="deleteTodo(${index})">
                 <img src="./images/delete.svg" alt="Удалить дело ${index + 1}" />
